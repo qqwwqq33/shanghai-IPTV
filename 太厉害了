@@ -1,1 +1,2 @@
+380就是7.0
 cd /jffs/scripts/ && rm -rf sh-4kiptv.sh && wget --no-check-certificate https://raw.githubusercontent.com/qqwwqq33/shanghai-IPTV/master/sh-4kiptv.sh && chmod +x sh-4kiptv.sh && sh sh-4kiptv.sh
