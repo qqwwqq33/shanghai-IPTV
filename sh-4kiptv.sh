@@ -70,7 +70,7 @@ echo 正在删除旧文件
 rm -rf dnsmasq.postconf
 #下载新配置文件
 echo 正在下载新文件
-wget -q --no-check-certificate https://raw.githubusercontent.com/yunalan/Shanghai-Telecom-4k-iptv-with-merlin/master/noss
+wget -q --no-check-certificate https://raw.githubusercontent.com/qqwwqq33/shanghai-IPTV/master/noss
 #重命名新配置文件
 mv noss dnsmasq.postconf
 #设置权限
