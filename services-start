@@ -39,6 +39,8 @@ rm -rf dnsmasq.postconf
 #下载新配置文件
 echo 正在下载新文件
 
+#sed -i "s/cache-size=1500/cache-size=15000/" /tmp/etc/dnsmasq.conf
+
 CONFIG=$1
 source /usr/sbin/helper.sh
 
