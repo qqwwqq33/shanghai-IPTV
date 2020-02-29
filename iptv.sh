@@ -3,9 +3,8 @@
 echo 正在增加开机自动重启dnsmasq
 #移动到脚本目录
 cd /jffs/scripts
+rm -rf 4k-start*
 service restart_dnsmasq
-#设置权限
-chmod -R 0777 4k-start
 #完成提示
 echo 成功
 
@@ -31,12 +30,19 @@ ping 127.0.0.1 -c 2 > /dev/null
 echo
 
 #脚本提示
-echo 正在删除不开启ss情况下的配置文件
-#移动到脚本目录
-cd /jffs/configs/dnsmasq.d
-#删除旧dnsmasq配置文件
+echo 正在修改ss dnsmasq配置文件
+#移动到ss dnsmasq目录
+cd /koolshare/ss/redchn
+#删除旧配置文件
 echo 正在删除旧文件
-rm -rf iptv.conf
+rm -rf dnsmasq.postconf
+#下载新配置文件
+echo 正在下载新文件
+wget -q --no-check-certificate https://raw.githubusercontent.com/qqwwqq33/shanghai-IPTV/master/ss
+#重命名新配置文件
+mv ss dnsmasq.postconf
+#设置权限
+chmod -R 0755 dnsmasq.postconf
 #完成提示
 echo 成功
 
