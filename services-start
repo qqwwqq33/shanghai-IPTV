@@ -16,35 +16,15 @@ echo
 #脚本提示
 echo 正在修改ss dnsmasq配置文件
 #移动到ss dnsmasq目录
-cd /koolshare/ss/redchn
-#删除旧配置文件
+cd /koolshare/ss/rules
 
-#设置权限
-chmod -R 0777 dnsmasq.postconf
-#完成提示
-echo 成功
-
-#延迟运行
-ping 127.0.0.1 -c 2 > /dev/null
-#空行
-echo
-
-#脚本提示
-echo 正在修改ss dnsmasq配置文件
-#移动到ss dnsmasq目录
-cd /koolshare/ss/redchn
 #删除旧配置文件
 echo 正在删除旧文件
 rm -rf dnsmasq.postconf
 #下载新配置文件
 echo 正在下载新文件
+cp /jffs/scripts/ss.1.1 /koolshare/ss/rules/dnsmasq.postconf
 
-wget -q --no-check-certificate https://raw.githubusercontent.com/qqwwqq33/shanghai-IPTV/master/ss.1
-
-#重命名新配置文件
-mv ss.1 dnsmasq.postconf
-#设置权限
-chmod -R 0755 dnsmasq.postconf
 #完成提示
 echo 成功
 
